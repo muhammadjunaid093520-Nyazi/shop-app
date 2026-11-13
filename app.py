@@ -58,6 +58,12 @@ if menu == "🎙️ وائس انٹری (Voice Entry)":
     st.subheader("مائیک سے بول کر اندراج کریں")
     st.info("مالک! نیچے آڈیو ریکارڈ کریں اور بولیں (مثلاً: 'علی کو پچاس ہزار روپے نقد دیے۔')")
 
+    # Manual / Text input fields placed here correctly inside Voice/Entry section
+    party = st.text_input("پارٹی کا نام")
+    item = st.text_input("آئٹم کا نام")
+    quantity = st.number_input("مقدار (Quantity)", min_value=0.0)
+    rate = st.number_input("ریٹ (Rate)", min_value=0.0)
+
     audio_file = st.audio_input("بولنے کے لیے یہاں کلک کریں:")
 
     if audio_file is not None and client:
